@@ -8,10 +8,11 @@ public interface TeamService{
 
 	public String insertTeamDetails(TeamDetails teamDetails);
 
-    public static TeamDetails getTeamDetailsByname(String name) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public TeamDetails getTeamDetailsByid(int id);
+
+	//public TeamDetails deleteTeamDetailsByname(String name);
+
+	
 	}
 
 	

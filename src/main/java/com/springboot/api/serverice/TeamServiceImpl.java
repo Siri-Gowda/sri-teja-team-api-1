@@ -31,8 +31,34 @@ public class TeamServiceImpl implements TeamService {
 
 
 
+	@Override
+	public TeamDetails getTeamDetailsByid(int id) {
+		logger.info("Id in service layer::"+id);
+		TeamDetails response=teamRepositoty.findByid(id);
+		return response;
+	}
+
+
+
+
+	/*@Override
+	public TeamDetails deleteTeamDetailsByname(String name) {
+		logger.info("Name in Service layer::"+name);
+		TeamDetails response = teamRepositoty.findByname(name);
+		return response;
+	}*/
+
+
+
+
 
 	}
+
+
+
+
+
+	
 		
 		
 	

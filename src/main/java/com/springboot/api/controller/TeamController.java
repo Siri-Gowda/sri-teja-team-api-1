@@ -77,7 +77,21 @@ public class TeamController {
 		
 	
 	}
+	@GetMapping("/team-data/{id}")
+	public TeamDetails getTeamDetailsByid(@PathVariable int id) {
+		logger.info("Id in contoller layer::"+id);
+		TeamDetails response = teamService.getTeamDetailsByid(id);
+		return response;
+	}
+	/*@DeleteMapping("/delete-team-data/{name}")
+	public TeamDetails deleteTeamDetailsByname(@PathVariable String name) {
+		logger.info("Name in controller Layer::"+name);
+		TeamDetails response = teamService.deleteTeamDetailsByname(name);
+		return response;
+	}*/
 	
+		
+	}
 	
 		
 	
@@ -85,6 +99,6 @@ public class TeamController {
 	
 
 
-}
+
 
 
