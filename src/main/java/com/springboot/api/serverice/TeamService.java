@@ -10,7 +10,9 @@ public interface TeamService{
 
 	public TeamDetails getTeamDetailsByid(int id);
 
-	//public TeamDetails deleteTeamDetailsByname(String name);
+	public TeamDetails getTeamDataBasedOnIdAndName(int id, String name);//method creation
+
+	
 
 	
 	}

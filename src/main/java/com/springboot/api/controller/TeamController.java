@@ -83,12 +83,20 @@ public class TeamController {
 		TeamDetails response = teamService.getTeamDetailsByid(id);
 		return response;
 	}
-	/*@DeleteMapping("/delete-team-data/{name}")
-	public TeamDetails deleteTeamDetailsByname(@PathVariable String name) {
-		logger.info("Name in controller Layer::"+name);
-		TeamDetails response = teamService.deleteTeamDetailsByname(name);
-		return response;
-	}*/
+	/**
+	 * get team details based on id and name
+	 * @param id and name
+	 * @return team details
+	 */
+	@GetMapping("/get-team-data-based-on-idandname/{id}/{name}")
+	public TeamDetails getTeamDataBasedOnIdAndName(@PathVariable int id,@PathVariable String name) {
+		logger.info("Id="+id+"name ="+name+"in controller layer..");
+		TeamDetails response=teamService.getTeamDataBasedOnIdAndName(id,name);//method calling
+	    return response;
+		
+		
+		
+	}
 	
 		
 	}
